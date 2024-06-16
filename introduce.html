@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>正阳花生</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				text-decoration: none;
+			}
+			.header{
+				width: 100%;
+				height: 90px;
+				margin: auto;
+			}
+			.logo img{
+				height: 90px;
+				float: left;
+				line-height: 90px;
+				position: relative;
+				top: 0;
+				left: 10px;
+			}
+			.search{
+				position: relative;
+				top: 50px;
+				right: 120px;
+				float: right;
+			}
+			.button{
+				width: 48px;
+				height: 40px;
+				background-color: #FF1F24;
+				border-radius: 10px;
+			}
+			input{
+				height: 35px;
+				width: 250px;
+				border-radius: 8px;
+			}
+			ul{
+				list-style-type: none;
+				overflow: hidden;
+			}
+			.nav{
+				width: 100%;
+				height: 48px;
+				line-height: 48px;
+				background-color: #FF1F24;
+				margin-bottom: 5px;
+				margin: 0 auto;
+				font-size: 17px;
+				display: flex;
+				justify-content: center;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0px auto;
+				padding: 0px;
+			}
+			.nav li{
+				display: inline-block;
+				width: 160px;
+				position: relative;
+				text-align: center;
+			}
+			li a{
+				display: block;
+				color: white;
+				text-decoration: none;
+			}
+			li a:hover{
+				background-color: lightblue;
+			}
+			.active{
+				background-color: lightblue;
+			}
+			.main{
+				background-color: rgba(100,100,100,0.1); /* 透明度 */
+				background-color: #fff;
+			}
+			.video{
+				width: 100%;
+				padding: 10px;
+				text-align: center;
+			}
+			.headlinebox{
+				text-align: center;
+				height: 150px;
+				width: 1000px;
+				margin: auto;
+				margin-bottom: 20px;
+				background-color: #f5f5f5;
+			}
+			.headlinebox h2{
+				padding: 24px 235px 20px 235px;
+			}
+			.headlinebox a{
+				color: #2e60c2;
+			}
+			.mainbox{
+				display: flex;
+				width: 65%;
+				border-radius: 10px;
+				margin: auto;
+				border: 1px solid;
+				background-color: rgba(100,100,100,0.1);
+			}
+			.left{
+				width: 520px;
+				height: 420px;
+				margin: 10px 10px 10px 10px;
+				border-radius: 10px;
+				background-color: lightblue;
+				background-color: #fff;
+				border: 1px solid gray;
+			}
+			.left:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			.left_img ,.left_img img{
+				width: 450px;
+				border-radius: 10px;
+				padding: 5px 0px;
+				margin: auto;
+			}
+			.left_text{
+				width: 480px;
+				margin: auto;
+			}
+			.left_text p{
+				text-indent: 2em;
+			}
+			.right{
+				width: 520px;
+				height: 420px;
+				margin: 10px 10px 10px 0px;
+				border-radius: 10px;
+				border: 1px solid gray;
+				background-color: #fff;
+			}
+			.right:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			.right_img,.right_img img{
+				width: 480px;
+				padding: 5px 0px;
+				margin: auto;
+			}
+			.right_text h4{
+				text-align: center;
+				width: 480px;
+				margin: auto;
+			}
+			.right_text a{
+				color: #2e60c2;
+			}
+			video{
+				border: 1px solid;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			.footer{
+				width: 100%;
+				height: 60px;
+				margin: 10px;
+				text-align: center;
+				background-color: lavenderblush;
+			}
+			.footer hr{
+				width: 90%;
+				margin: auto;
+			}
+			.footer h4{
+				padding-top: 6px;
+				padding-bottom: 5px;
+			}
+			.footer h5{
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<form action="#" class="search">
+				<input type="text" placeholder="请输入关键词" />
+				<button type="submit" class="button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+			<div class="nav">
+				<ul id="nav">
+					<li><a href="index.html" class="link">首页</a></li>
+					<li><a href="introduce.html" class="link">正阳花生</a></li>
+					<li><a href="#introduce" class="link">郑州黄河鲤</a></li>
+					<li><a href="#travel" class="link">信阳毛尖</a></li>
+					<li><a href="#history" class="link">新乡小麦</a></li>
+					<li><a href="#henan" class="link">南阳黄牛</a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="headlinebox">
+					<h2><a href="">欢迎来正阳领略花生文化</a></h2>
+					<a href="https://www.henan.gov.cn/2019/02-21/735022.html">“正阳花生”何以为河南省赢来首个国家现代农业产业园</a>
+				</div>
+				<div class="video">
+					<video width="900" src="img/河南·正阳县 中国花生之都.mp4" 
+					 controls="controls" autoplay="autoplay" loop="-1">
+					</video>
+				</div>
+				<div class="mainbox">
+					<div class="left">
+						<div class="left_img">
+							<img src="img/正阳县.jpg" alt="" />
+						</div>
+						<div class="left_text">
+							<p>12月18日，2019中国品牌论坛——
+							“一县一品”品牌建设发展论坛在京召开。
+							“一县一品”品牌扶持活动自2017年11月
+							开展以来，已取得了初步成果，2019年为50
+							个老区县域打造出享誉国内外的驰名农（
+							副）产品品牌。</p>
+						</div>
+					</div>
+					<div class="right">
+						<div class="right_img">
+							<img src="img/花生博物馆.jpg" alt="" />
+						</div>
+						<div class="right_text">
+							<h4><a href="https://www.zhumadian.gov.cn/html/site_gov/articles/202306/178017.html">
+							正阳县：“正阳花生”成为推动乡村振兴的“金字招牌”</a></h4>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer">
+				<h4><a href="">关于我们</a></h4>
+				<hr />
+				<h5>&copy;计算机科学技术三班 张杰 20220002162</h5>
+			</div>
+		</div>
+		<script>
+			// 获取当前页面的URL
+			var currentUrl = window.location.href;
+			// 获取所有导航栏链接
+			var navLinks = document.getElementsByClassName('link');
+			// 遍历每个导航栏链接
+			Array.prototype.forEach.call(navLinks, function(navLink) {
+			    // 获取导航栏链接的URL
+			    var linkUrl = navLink.href;
+			    // 检查导航栏链接的URL是否和当前页面的URL匹配
+			    if (currentUrl === linkUrl) {
+			        // 添加一个特定的类名来高亮显示该导航栏链接
+			        navLink.classList.add('active');
+			    }
+			});
+		</script>
+	</body>
+</html>
