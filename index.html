@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>河南农产品品牌推广</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	</head>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		text-decoration: none;
+	}
+	.header{
+		width: 100%;
+		height: 90px;
+		margin: auto;
+	}
+	.logo img{
+		height: 90px;
+		float: left;
+		line-height: 90px;
+		position: relative;
+		top: 0;
+		left: 10px;
+	}
+	.search{
+		position: relative;
+		top: 50px;
+		right: 120px;
+		float: right;
+	}
+	.button{
+		width: 48px;
+		height: 40px;
+		background-color: #FF1F24;
+		border-radius: 10px;
+	}
+	input{
+		height: 35px;
+		width: 250px;
+		border-radius: 8px;
+	}
+	ul{
+		list-style-type: none;
+		overflow: hidden;
+	}
+	.login{
+		text-align: center;
+		position: relative;
+		top: 50px;
+		left: 240px;
+		float: right;
+	}
+	.dropbt{
+		display: inline-block;
+		text-align: center;
+		padding: 10px 15px;
+		border-radius: 8px;
+	}
+	.dropbt:hover{
+		background-color: lightcoral;
+	}
+	.dropdown_content{
+		display: none;
+		position: absolute;
+		text-align: center;
+		background-color: #f9f9f9;
+		width: 100px;
+		height: 55px;
+		box-shadow: 0px 8px 16px 0px rgba(12, 12, 12, 0.2);
+		overflow: hidden;
+	}
+	.dropdown:hover .dropdown_content{
+		transition: all 1.0s;
+		display: block;
+	}
+	.nav{
+		width: 100%;
+		height: 48px;
+		line-height: 48px;
+		background-color: #FF1F24;
+		margin-bottom: 5px;
+		margin: 0 auto;
+		font-size: 17px;
+		display: flex;
+		justify-content: center;
+	}
+	ul{
+		list-style-type: none;
+		margin: 0px auto;
+		padding: 0px;
+	}
+	.nav li{
+		display: inline-block;
+		width: 160px;
+		position: relative;
+		text-align: center;
+	}
+	li a{
+		display: block;
+		color: white;
+		text-decoration: none;
+	}
+	li a:hover{
+		background-color: lightblue;
+	}
+	.active{
+		background-color: lightblue;
+	}
+	.headlinebox{
+		text-align: center;
+		height: 150px;
+		width: 1000px;
+		margin: auto;
+		margin-bottom: 20px;
+		background-color: #f5f5f5;
+	}
+	.headlinebox h2{
+		padding: 24px 235px 24px 235px;
+		width: 530px;
+		height: 102px;
+	}
+	.headlinebox a{
+		color: #2e60c2;
+	}
+	.banner{
+		width: 1000px;
+		height: 550px;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+	.img{
+		position: absolute;
+		top: 315px;
+		width: 1000px;
+		height: 545px;
+		color: #fff;
+		opacity: 0;
+		transition: all 0.5s ease-in 0s;
+		overflow: hidden;
+	}
+	.img:nth-child(1){
+		background: url(img/img1.jpg);
+		background-size: 100%;
+	}
+	.img:nth-child(2){
+		background: url(img/img2.jpg);
+		background-size: 100%;
+	}
+	.img:nth-child(3){
+		background: url(img/img3.jpg);
+		background-size: 100%;
+	}
+	.prev{
+		position: absolute;
+		top: 530px;
+		left: 34%;
+		width: 20px;
+		height: 24px;
+		border: 1px solid rgba(255, 255, 255, 2);
+		border-radius: 0 5px 0 5px;
+		margin-top: 30px;
+		margin-left: -240px;
+		color: #c2ccb;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 2);
+		cursor: pointer;
+	}
+	.next{
+		position: absolute;
+		top: 530px;
+		left: 66%;
+		width: 20px;
+		height: 24px;
+		border: 1px solid rgba(255, 255, 255, 2);
+		border-radius: 5px 0 0 5px;
+		margin-top: 30px;
+		margin-left: 218px;
+		color: #c2ccb;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 2);
+		cursor: pointer;
+	}
+	.next:hover,
+	.prev:hover{
+		background-color: rgba(1, 1, 1, 0.73);
+		color: #FFFF;
+	}
+	.div1{
+		position: absolute;
+		top: 820px;
+		left: 50%;
+		margin-left: -40px;
+	}
+	.little{
+		float: left;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background-color: rgba(255, 245, 244, .3);
+		margin-left: 4px;
+		cursor: pointer;
+		border: 1px solid #464646;
+	}
+	.show{
+		opacity: 1;
+	}
+	.little_show{
+		background-color: #FFFF;
+	}
+	.main{
+		width: 1200px;
+		margin: auto;
+	}
+	.box{
+		display: flex;
+	}
+	.left,.mid,.right{
+		margin-top: 10px;
+		flex: 1;
+		width: 400px;
+		height: 480px;
+		border-radius: 10px;
+		background-color: lavender;
+	}
+	.mid{
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.left:hover{
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	.mid:hover{
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	.right:hover{
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+	.up img{
+		width: 380px;
+		padding: 10px 10px 10px 10px;
+	}
+	.text{
+		padding: 0px 10px 10px 10px;
+	}
+	.text h2{
+		padding-bottom: 5px;
+		text-align: center;
+	}
+	.text p{
+		padding: 5px;
+		font-size:16px;
+		text-indent: 2em;
+	}
+	.footer{
+		width: 100%;
+		height: 60px;
+		margin: 10px;
+		text-align: center;
+		background-color: lavenderblush;
+	}
+	.footer hr{
+		width: 90%;
+		margin: auto;
+	}
+	.footer h4{
+		padding-top: 6px;
+		padding-bottom: 5px;
+	}
+	.footer h5{
+		padding: 5px;
+	}
+	.left .up{
+		position: relative;
+		background: url(img/left_up.jpg);
+		width: 360px;
+		height: 250px;
+		padding: 10px 10px 10px 10px;
+		float: left;
+		overflow: hidden;
+	}
+	.left_text p{
+		position: absolute;
+		width: 300px;
+		height: 270px;
+		line-height: 285px;
+		background: rgba(209,194,211,0.5);
+		transition: all 0.5s;
+		text-align: center;
+		left: -300px;
+		top: 0;
+	}
+	.left_text:hover p{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.mid_img{
+		position: relative;
+	}
+	.mid_img img,.mid_img .text{
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	
+	.mid_img p{
+		width: 380px;
+		margin: auto;
+		text-align: justify;
+		font-size:18px;
+	}
+	.zheng,.fan{
+		backface-visibility: hidden;
+		transition: all 0.5s ease-in 0s;
+	}
+	.fan{
+		transform: rotateY(-180deg);
+	}
+	.mid_img:hover .zheng{
+		transform: rotateY(180deg);
+	}
+	.mid_img:hover .fan{
+		transform: rotateY(0deg);
+	}
+	.text{
+		top: 80px;
+	}
+	.hov img{
+		transition: all 0.5s ease;
+	}
+	.hov:hover img{
+		transform: scale(1.1);
+	}
+  /* 模态窗口的样式 */
+  .modal {
+	display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1; /* 位于顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全屏宽度 */
+    height: 100%; /* 全屏高度 */
+    overflow: auto; /* 超出时滚动 */
+    background-color: rgb(0,0,0); /* 背景颜色带些透明度 */
+    background-color: rgba(0,0,0,0.4); /* 透明度 */
+  }
+  /* 模态窗口的样式 */
+  .modal2 {
+  	display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1; /* 位于顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全屏宽度 */
+    height: 100%; /* 全屏高度 */
+    overflow: auto; /* 超出时滚动 */
+    background-color: rgba(0,0,0,0.4); /* 透明度 */
+  }
+  .lr_container{
+	  max-width: 400px;
+	  margin: 18% auto; /* 垂直居中 */
+	  padding: 20px;
+	  background: #fff;
+	  border-radius: 5px;
+	  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .loginText{
+      text-align: center;
+      color: #333;
+  }
+  .lint {
+     width: 94.5%;
+     height: 20px;
+     padding: 10px;
+     margin: 10px 0 15px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+  }
+  .submitBtn{
+      padding: 10px;
+      width: 100%;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .submitBtn:hover {
+      background: #0056b3;
+  }
+  .close1{
+      color: #ff0000;
+	  float: right;
+  }
+  .close2{
+      color: #ff0000;
+  	  float: right;
+  }
+  #loginBtn,#registerBtn{
+	width: 90%;
+	height: 24px;
+	 margin-top:2px;
+	background: #fff;
+	color: black;
+	border: none;
+  }
+  #loginBtn:hover{
+	  background-color: aquamarine;
+	  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+  #registerBtn:hover{
+	  background-color: aquamarine;
+	  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+</style>
+</head>
+<body>
+		<div class="header">
+			<div class="logo">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<form action="#" class="search">
+				<input type="text" placeholder="请输入关键词" />
+				<button type="submit" class="button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+			<div class="login">
+				<ul>
+					<div class="dropdown">
+						<a href="#" class="dropbt"><i class="fa-regular fa-user"></i></a>
+						<div class="dropdown_content">
+							<li><button id="loginBtn">登录</button></li>
+							<li><button id="registerBtn">注册</button></li>
+						</div>
+					</div>
+				</ul>
+			</div>
+			<div id="login_modal" class="modal">
+				<div class="lr_container">
+					<span class="close1">&times;</span>
+					<h2 class="loginText">登录</h2>
+					<form id="loginForm">
+						<input class="lint" type="text" placeholder="用户名" required><br>
+						<input class="lint" type="password" placeholder="密码" required><br>
+						<button type="submit" class="submitBtn" onclick="login()">登录</button>
+					</form>
+				</div>
+			</div>
+			<div id="register_modal" class="modal2">
+				<div class="lr_container">
+					<span class="close2">&times;</span>
+					<h2 class="loginText">注册</h2>
+					<form action="#" class="register">
+						<input class="lint" type="text" placeholder="用户名"/>
+						<input class="lint" type="password" placeholder="密码"/>
+						<input class="lint" type="password" placeholder="确认密码"/>
+						<button class="submitBtn" type="submit" onclick="register()">注册</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<ul id="nav">
+				<li><a href="index.html" class="link">首页</a></li>
+				<li><a href="introduce.html" class="link">正阳花生</a></li>
+				<li><a href="#introduce" class="link">郑州黄河鲤</a></li>
+				<li><a href="#travel" class="link">信阳毛尖</a></li>
+				<li><a href="#history" class="link">新乡小麦</a></li>
+				<li><a href="#henan" class="link">南阳黄牛</a></li>
+			</ul>
+		</div>
+		<div class="headlinebox">
+			<h2>
+				<a href="https://www.gov.cn/zhengce/zhengceku/202406/content_6955423.htm">积极相应<br />
+				河南农业农村部办公厅<br />
+				关于开展2024年农业品牌精品培育工作的通知</a>
+			</h2>
+		</div>
+		<div class="banner">
+			<div class="img show"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<span class="next">></span>
+			<span class="prev"><</span>
+			<div class="div1">
+				<span class="little little_show" data-index="1"></span>
+				<span class="little" data-index="2"></span>
+				<span class="little" data-index="3"></span>
+			</div>
+		</div>
+		<div class="main box">
+			<div class="left">
+				<div class="up left_text">
+					<p>2023年河南种植面积占比为29.41%</p>
+				</div>
+				<div class="text">
+					<h2>县（区）积极“蹚路子”</h2>
+					<hr />
+					<p>2022年7月22日，
+					<strong>河南省农业品牌精品培育计划</strong>启动仪式暨品牌合作签约仪式正式举行。
+					会上，福来咨询与信阳市浉河区、临颍县、郏县签订战略合作协议，
+					共同打造河南农业品牌新标杆。</p>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="up mid_img">
+					<img src="img/mid_up.jpg" alt="" class="zheng" />
+					<p class="fan mid_text">
+						<br />12月15日，国家统计局河南调查总队发布消息，
+					经国家统计局河南调查总队对全省夏粮、
+					秋粮产量抽样调查样本实割实测和播种面积遥感监测，
+					并报国家统计局核准，2023年河南粮食总产量1324.9亿斤，
+					居全国第二，连续7年稳定在1300亿斤以上。
+					同时，河南秋粮产量增速居粮食主产省第一，创历史新高。</p>
+				</div>
+				<div class="text mid_img">
+					<h2>河南打造农业品牌的底气和路径</h2>
+					<hr />
+					<p>关于农业品牌，河南省农业农村主管部门有清晰的打造路径：
+					夯实品牌发展基础，塑造品牌形象，提升品牌价值，
+					<strong>打造丰满的农业品牌生态体系</strong>。</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="up hov">
+					<img src="img/right_up.jpg" alt="" />
+				</div>
+				<div class="text">
+					<h2>更加凸显规模化、特色化</h2>
+					<hr />
+					<p>中国农业国际交流协会副会长吴振涛首先提到河南的区位优势，
+					“地处中原大地，又承东启西、连南贯北，农业方面，
+					基本囊括了全中国能吃到的美食，融合特色明显，‘中’的特性发挥得淋漓尽致，
+					这就给农业产业化、食品工业发展提供了一个很有利的条件，
+					能通过产业大发展，进而<strong>塑造大品牌</strong>、强品牌”。</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<h4><a href="">关于我们</a></h4>
+			<hr />
+			<h5>&copy;计算机科学技术三班 张杰 20220002162</h5>
+		</div>
+		<script>
+			//导航栏
+			// 获取当前页面的URL
+			var currentUrl = window.location.href;
+			// 获取所有导航栏链接
+			var navLinks = document.getElementsByClassName('link');
+			// 遍历每个导航栏链接
+			Array.prototype.forEach.call(navLinks, function(navLink) {
+			    // 获取导航栏链接的URL
+			    var linkUrl = navLink.href;
+			    // 检查导航栏链接的URL是否和当前页面的URL匹配
+			    if (currentUrl === linkUrl) {
+			        // 添加一个特定的类名来高亮显示该导航栏链接
+			        navLink.classList.add('active');
+			    }
+			});
+			//登录注册窗口
+			// 获取模态窗口
+			var modal = document.getElementById('login_modal');
+			var modal2 = document.getElementById('register_modal');
+			// 获取 <span> 元素，用于关闭模态窗口
+			var span1 = document.getElementsByClassName("close1")[0];
+			var span2 = document.getElementsByClassName("close2")[0];
+			// 获取登录和注册按钮
+			var loginBtn = document.getElementById("loginBtn");
+			var registerBtn = document.getElementById("registerBtn");
+			//轮播图
+			let img = document.getElementsByClassName("img");
+			let next = document.querySelector(".next");
+			let prev = document.querySelector(".prev");
+			let banner = document.getElementsByClassName("banner");
+			let little = document.getElementsByClassName("little");
+			let index = 0;
+			let time=0;
+			//登录窗口
+			// 当用户点击登录按钮时，显示模态窗口
+			loginBtn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			// 当用户点击注册按钮时，显示模态窗口
+			registerBtn.onclick = function() {
+			  modal2.style.display = "block";
+			}
+			// 当用户点击 <span> (x), 关闭模态窗口
+			span1.onclick = function() {
+			  modal.style.display = "none";
+			}
+			span2.onclick = function() {
+			  modal2.style.display = "none";
+			}
+			// 当用户点击任何地方，关闭模态窗口
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+			    modal.style.display = "none";
+			  }
+			  if (event.target == modal2) {
+			    modal2.style.display = "none";
+			  }
+			}
+			function login() {
+			    alert('登录成功！');
+				modal.style.display = "none";
+			}
+			function register() {
+			    alert('注册成功！');
+				modal2.style.display = "none";
+			}
+			
+			//轮播图
+			let clear=function(){
+				for(let i=0;i<img.length;i++){
+					img[i].className="img";
+				}
+				for(let i=0;i<little.length;i++){
+					little[i].className="little";
+				}
+			};
+			let show = function(){
+				img[index].className="img show"
+				little[index].className = "little little_show";
+				time=0;
+			};
+			let nextBtn = function(){
+				clear();
+				index++;
+				if(index>img.length-1){
+					index=0;
+				}
+				show();
+			};
+			next.addEventListener("click",function(){
+				nextBtn();
+			});
+			let prevBtn = function(){
+				clear();
+				index--;
+				if(index<0){
+					index=img.length-1;
+				}
+				show();
+			};
+			prev.addEventListener("click",function(){
+				prevBtn();
+			});
+			for(let i=0;i<little.length;i++){
+				little[i].addEventListener("click",function(){
+					clear();
+					index = this.getAttribute("data-index");
+					show();
+				})
+			}
+			let timer;
+			function autoTime(){
+				timer = setInterval(function(){
+					time++;
+					if(time==2){
+						nextBtn();
+					}else if(time>2){
+						time=0;
+					}
+					console.log("time="+time);
+				},1000);
+			}
+			autoTime();
+			banner.onmouseover = function(){
+				clearInterval(timer);
+			}
+			banner.onmouseout = function(){
+				time = 0;
+				autoTime();
+			}
+		</script>
+	</body>
+</html>
