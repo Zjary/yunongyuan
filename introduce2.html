@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>郑州黄河鲤</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" href="css/introduce.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<form action="#" class="search">
+				<input type="text" placeholder="请输入关键词" />
+				<button type="submit" class="button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+			<div class="nav">
+				<ul id="nav">
+					<li><a href="index.html" class="link">首页</a></li>
+					<li><a href="introduce1.html" class="link">正阳花生</a></li>
+					<li><a href="introduce2.html" class="link">郑州黄河鲤</a></li>
+					<li><a href="introduce3.html" class="link">信阳毛尖</a></li>
+					<li><a href="introduce4.html" class="link">新乡小麦</a></li>
+					<li><a href="introduce5.html" class="link">南阳黄牛</a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="headlinebox">
+					<h2><a href="">郑州黄河鲤鱼</a></h2>
+					<a href="https://baike.baidu.com/item/
+					%E9%83%91%E5%B7%9E%E9%BB%84%E6%B2%B3%E9
+					%B2%A4%E9%B1%BC/9758732#reference-2">2019年11月15日，入选中国农业品牌目录</a>
+				</div>
+				<div class="banner">
+					<img src="img/banner.jpg" alt="" width="450px" class="introduce2_img"/>
+				</div>
+				<div class="mainbox">
+					<div class="left">
+						<div class="left_img">
+							<img src="img/黄河鲤鱼.jpg" alt="" />
+						</div>
+						<div class="left_text">
+							<p>豫选黄河鲤是河南省水产科学研究院，
+							采用野生黄河鲤做亲本，经过近20年、连续8代选育而成。
+							</p>
+						</div>
+					</div>
+					<div class="right">
+						<div class="right_img">
+							<img src="img/鲤鱼.webp" alt=""/>
+						</div>
+						<div class="right_text">
+							<h4><a href="https://www.163.com/dy/article/HVUGA0TN0525RS7P.html">
+							郑州黄河鲤鱼特点:金鳞赤尾，色彩艳丽，外形美观，肉质细腻，营养丰富，俗称铜头铁尾豆腐腰。</a></h4>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer">
+				<h4><a href="">关于我们</a></h4>
+				<hr />
+				<h5>&copy;计算机科学技术三班 张杰 20220002162</h5>
+			</div>
+		</div>
+		<script>
+			// 获取当前页面的URL
+			var currentUrl = window.location.href;
+			// 获取所有导航栏链接
+			var navLinks = document.getElementsByClassName('link');
+			// 遍历每个导航栏链接
+			Array.prototype.forEach.call(navLinks, function(navLink) {
+			    // 获取导航栏链接的URL
+			    var linkUrl = navLink.href;
+			    // 检查导航栏链接的URL是否和当前页面的URL匹配
+			    if (currentUrl === linkUrl) {
+			        // 添加一个特定的类名来高亮显示该导航栏链接
+			        navLink.classList.add('active');
+			    }
+			});
+		</script>
+	</body>
+</html>
