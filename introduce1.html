@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>正阳花生</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" href="css/introduce.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<form action="#" class="search">
+				<input type="text" placeholder="请输入关键词" />
+				<button type="submit" class="button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+			<div class="nav">
+				<ul id="nav">
+					<li><a href="index.html" class="link">首页</a></li>
+					<li><a href="introduce1.html" class="link">正阳花生</a></li>
+					<li><a href="introduce2.html" class="link">郑州黄河鲤</a></li>
+					<li><a href="introduce3.html" class="link">信阳毛尖</a></li>
+					<li><a href="introduce4.html" class="link">新乡小麦</a></li>
+					<li><a href="introduce5.html" class="link">南阳黄牛</a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="headlinebox">
+					<h2><a href="">欢迎来正阳领略花生文化</a></h2>
+					<a href="https://www.henan.gov.cn/2019/02-21/735022.html">“正阳花生”何以为河南省赢来首个国家现代农业产业园</a>
+				</div>
+				<div class="video">
+					<video width="900" src="img/河南·正阳县 中国花生之都.mp4" 
+					 controls="controls" autoplay="autoplay" loop="-1">
+					</video>
+				</div>
+				<div class="mainbox">
+					<div class="left">
+						<div class="left_img">
+							<img src="img/正阳县.jpg" alt="" />
+						</div>
+						<div class="left_text">
+							<p>12月18日，2019中国品牌论坛——
+							“一县一品”品牌建设发展论坛在京召开。
+							“一县一品”品牌扶持活动自2017年11月
+							开展以来，已取得了初步成果，2019年为50
+							个老区县域打造出享誉国内外的驰名农（
+							副）产品品牌。</p>
+						</div>
+					</div>
+					<div class="right">
+						<div class="right_img">
+							<img src="img/花生博物馆.jpg" alt="" />
+						</div>
+						<div class="right_text">
+							<h4><a href="https://www.zhumadian.gov.cn/html/site_gov/articles/202306/178017.html">
+							正阳县：“正阳花生”成为推动乡村振兴的“金字招牌”</a></h4>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer">
+				<h4><a href="">关于我们</a></h4>
+				<hr />
+				<h5>&copy;计算机科学技术三班 张杰 20220002162</h5>
+			</div>
+		</div>
+		<script>
+			// 获取当前页面的URL
+			var currentUrl = window.location.href;
+			// 获取所有导航栏链接
+			var navLinks = document.getElementsByClassName('link');
+			// 遍历每个导航栏链接
+			Array.prototype.forEach.call(navLinks, function(navLink) {
+			    // 获取导航栏链接的URL
+			    var linkUrl = navLink.href;
+			    // 检查导航栏链接的URL是否和当前页面的URL匹配
+			    if (currentUrl === linkUrl) {
+			        // 添加一个特定的类名来高亮显示该导航栏链接
+			        navLink.classList.add('active');
+			    }
+			});
+		</script>
+	</body>
+</html>
