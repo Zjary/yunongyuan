@@ -4,418 +4,417 @@
 		<meta charset="utf-8" />
 		<title>河南农产品品牌推广</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				text-decoration: none;
+			}
+			.header{
+				width: 100%;
+				height: 90px;
+				margin: auto;
+			}
+			.logo img{
+				height: 90px;
+				float: left;
+				line-height: 90px;
+				position: relative;
+				top: 0;
+				left: 10px;
+			}
+			.search{
+				position: relative;
+				top: 50px;
+				right: 120px;
+				float: right;
+			}
+			.button{
+				width: 48px;
+				height: 40px;
+				background-color: #FF1F24;
+				border-radius: 10px;
+			}
+			input{
+				height: 35px;
+				width: 250px;
+				border-radius: 8px;
+			}
+			ul{
+				list-style-type: none;
+				overflow: hidden;
+			}
+			.login{
+				text-align: center;
+				position: relative;
+				top: 50px;
+				left: 240px;
+				float: right;
+			}
+			.dropbt{
+				display: inline-block;
+				text-align: center;
+				padding: 10px 15px;
+				border-radius: 8px;
+			}
+			.dropbt:hover{
+				background-color: lightcoral;
+			}
+			.dropdown_content{
+				display: none;
+				position: absolute;
+				text-align: center;
+				background-color: #f9f9f9;
+				width: 100px;
+				height: 55px;
+				box-shadow: 0px 8px 16px 0px rgba(12, 12, 12, 0.2);
+				overflow: hidden;
+			}
+			.dropdown:hover .dropdown_content{
+				transition: all 1.0s;
+				display: block;
+			}
+			.nav{
+				width: 100%;
+				height: 48px;
+				line-height: 48px;
+				background-color: #FF1F24;
+				margin-bottom: 5px;
+				margin: 0 auto;
+				font-size: 17px;
+				display: flex;
+				justify-content: center;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0px auto;
+				padding: 0px;
+			}
+			.nav li{
+				display: inline-block;
+				width: 160px;
+				position: relative;
+				text-align: center;
+			}
+			li a{
+				display: block;
+				color: white;
+				text-decoration: none;
+			}
+			li a:hover{
+				background-color: lightblue;
+			}
+			.active{
+				background-color: lightblue;
+			}
+			.headlinebox{
+				text-align: center;
+				height: 150px;
+				width: 1000px;
+				margin: auto;
+				margin-bottom: 20px;
+				background-color: #f5f5f5;
+			}
+			.headlinebox h2{
+				padding: 24px 235px 24px 235px;
+				width: 530px;
+				height: 102px;
+			}
+			.headlinebox a{
+				color: #2e60c2;
+			}
+			.banner{
+				width: 1000px;
+				height: 550px;
+				margin: auto;
+				margin-bottom: 20px;
+			}
+			.img{
+				position: absolute;
+				top: 315px;
+				width: 1000px;
+				height: 545px;
+				color: #fff;
+				opacity: 0;
+				transition: all 0.5s ease-in 0s;
+				overflow: hidden;
+			}
+			.img:nth-child(1){
+				background: url(img/img1.jpg);
+				background-size: 100%;
+			}
+			.img:nth-child(2){
+				background: url(img/img2.jpg);
+				background-size: 100%;
+			}
+			.img:nth-child(3){
+				background: url(img/img3.jpg);
+				background-size: 100%;
+			}
+			.prev{
+				position: absolute;
+				top: 530px;
+				left: 34%;
+				width: 20px;
+				height: 24px;
+				border: 1px solid rgba(255, 255, 255, 2);
+				border-radius: 0 5px 0 5px;
+				margin-top: 30px;
+				margin-left: -240px;
+				color: #c2ccb;
+				text-align: center;
+				background-color: rgba(255, 255, 255, 2);
+				cursor: pointer;
+			}
+			.next{
+				position: absolute;
+				top: 530px;
+				left: 66%;
+				width: 20px;
+				height: 24px;
+				border: 1px solid rgba(255, 255, 255, 2);
+				border-radius: 5px 0 0 5px;
+				margin-top: 30px;
+				margin-left: 218px;
+				color: #c2ccb;
+				text-align: center;
+				background-color: rgba(255, 255, 255, 2);
+				cursor: pointer;
+			}
+			.next:hover,
+			.prev:hover{
+				background-color: rgba(1, 1, 1, 0.73);
+				color: #FFFF;
+			}
+			.div1{
+				position: absolute;
+				top: 820px;
+				left: 50%;
+				margin-left: -40px;
+			}
+			.little{
+				float: left;
+				width: 10px;
+				height: 10px;
+				border-radius: 100%;
+				background-color: rgba(255, 245, 244, .3);
+				margin-left: 4px;
+				cursor: pointer;
+				border: 1px solid #464646;
+			}
+			.show{
+				opacity: 1;
+			}
+			.little_show{
+				background-color: #FFFF;
+			}
+			.main{
+				width: 1200px;
+				margin: auto;
+			}
+			.box{
+				display: flex;
+			}
+			.left,.mid,.right{
+				margin-top: 10px;
+				flex: 1;
+				width: 400px;
+				height: 480px;
+				border-radius: 10px;
+				background-color: lavender;
+			}
+			.mid{
+				margin-left:10px;
+				margin-right:10px;
+			}
+			.left:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			.mid:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			.right:hover{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			.up img{
+				width: 380px;
+				padding: 10px 10px 10px 10px;
+			}
+			.text{
+				padding: 0px 10px 10px 10px;
+			}
+			.text h2{
+				padding-bottom: 5px;
+				text-align: center;
+			}
+			.text p{
+				padding: 5px;
+				font-size:16px;
+				text-indent: 2em;
+			}
+			.footer{
+				width: 100%;
+				height: 60px;
+				margin: 10px;
+				text-align: center;
+				background-color: lavenderblush;
+			}
+			.footer hr{
+				width: 90%;
+				margin: auto;
+			}
+			.footer h4{
+				padding-top: 6px;
+				padding-bottom: 5px;
+			}
+			.footer h5{
+				padding: 5px;
+			}
+			.left .up{
+				position: relative;
+				background: url(img/left_up.jpg);
+				width: 360px;
+				height: 250px;
+				padding: 10px 10px 10px 10px;
+				float: left;
+				overflow: hidden;
+			}
+			.left_text p{
+				position: absolute;
+				width: 300px;
+				height: 270px;
+				line-height: 285px;
+				background: rgba(209,194,211,0.5);
+				transition: all 0.5s;
+				text-align: center;
+				left: -300px;
+				top: 0;
+			}
+			.left_text:hover p{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.mid_img{
+				position: relative;
+			}
+			.mid_img img,.mid_img .text{
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			
+			.mid_img p{
+				width: 380px;
+				margin: auto;
+				text-align: justify;
+				font-size:18px;
+			}
+			.zheng,.fan{
+				backface-visibility: hidden;
+				transition: all 0.5s ease-in 0s;
+			}
+			.fan{
+				transform: rotateY(-180deg);
+			}
+			.mid_img:hover .zheng{
+				transform: rotateY(180deg);
+			}
+			.mid_img:hover .fan{
+				transform: rotateY(0deg);
+			}
+			.text{
+				top: 80px;
+			}
+			.hov img{
+				transition: all 0.5s ease;
+			}
+			.hov:hover img{
+				transform: scale(1.1);
+			}
+		  /* 模态窗口的样式 */
+		  .modal {
+			display: none; /* 默认隐藏 */
+		    position: fixed;
+		    z-index: 1; /* 位于顶层 */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* 全屏宽度 */
+		    height: 100%; /* 全屏高度 */
+		    overflow: auto; /* 超出时滚动 */
+		    background-color: rgb(0,0,0); /* 背景颜色带些透明度 */
+		    background-color: rgba(0,0,0,0.4); /* 透明度 */
+		  }
+		  /* 模态窗口的样式 */
+		  .modal2 {
+		  	display: none; /* 默认隐藏 */
+		    position: fixed;
+		    z-index: 1; /* 位于顶层 */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* 全屏宽度 */
+		    height: 100%; /* 全屏高度 */
+		    overflow: auto; /* 超出时滚动 */
+		    background-color: rgba(0,0,0,0.4); /* 透明度 */
+		  }
+		  .lr_container{
+			  max-width: 400px;
+			  margin: 18% auto; /* 垂直居中 */
+			  padding: 20px;
+			  background: #fff;
+			  border-radius: 5px;
+			  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		  }
+		  .loginText{
+		      text-align: center;
+		      color: #333;
+		  }
+		  .lint {
+		     width: 94.5%;
+		     height: 20px;
+		     padding: 10px;
+		     margin: 10px 0 15px;
+		     border: 1px solid #ccc;
+		     border-radius: 5px;
+		  }
+		  .submitBtn{
+		      padding: 10px;
+		      width: 100%;
+		      background: #007bff;
+		      color: #fff;
+		      border: none;
+		      border-radius: 5px;
+		      cursor: pointer;
+		  }
+		  .submitBtn:hover {
+		      background: #0056b3;
+		  }
+		  .close1{
+		      color: #ff0000;
+			  float: right;
+		  }
+		  .close2{
+		      color: #ff0000;
+		  	  float: right;
+		  }
+		  #loginBtn,#registerBtn{
+			width: 90%;
+			height: 24px;
+			 margin-top:2px;
+			background: #fff;
+			color: black;
+			border: none;
+		  }
+		  #loginBtn:hover{
+			  background-color: aquamarine;
+			  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+		  }
+		  #registerBtn:hover{
+			  background-color: aquamarine;
+			  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+		  }
+		</style>
 	</head>
-<style>
-	*{
-		margin: 0px;
-		padding: 0px;
-		text-decoration: none;
-	}
-	.header{
-		width: 100%;
-		height: 90px;
-		margin: auto;
-	}
-	.logo img{
-		height: 90px;
-		float: left;
-		line-height: 90px;
-		position: relative;
-		top: 0;
-		left: 10px;
-	}
-	.search{
-		position: relative;
-		top: 50px;
-		right: 120px;
-		float: right;
-	}
-	.button{
-		width: 48px;
-		height: 40px;
-		background-color: #FF1F24;
-		border-radius: 10px;
-	}
-	input{
-		height: 35px;
-		width: 250px;
-		border-radius: 8px;
-	}
-	ul{
-		list-style-type: none;
-		overflow: hidden;
-	}
-	.login{
-		text-align: center;
-		position: relative;
-		top: 50px;
-		left: 240px;
-		float: right;
-	}
-	.dropbt{
-		display: inline-block;
-		text-align: center;
-		padding: 10px 15px;
-		border-radius: 8px;
-	}
-	.dropbt:hover{
-		background-color: lightcoral;
-	}
-	.dropdown_content{
-		display: none;
-		position: absolute;
-		text-align: center;
-		background-color: #f9f9f9;
-		width: 100px;
-		height: 55px;
-		box-shadow: 0px 8px 16px 0px rgba(12, 12, 12, 0.2);
-		overflow: hidden;
-	}
-	.dropdown:hover .dropdown_content{
-		transition: all 1.0s;
-		display: block;
-	}
-	.nav{
-		width: 100%;
-		height: 48px;
-		line-height: 48px;
-		background-color: #FF1F24;
-		margin-bottom: 5px;
-		margin: 0 auto;
-		font-size: 17px;
-		display: flex;
-		justify-content: center;
-	}
-	ul{
-		list-style-type: none;
-		margin: 0px auto;
-		padding: 0px;
-	}
-	.nav li{
-		display: inline-block;
-		width: 160px;
-		position: relative;
-		text-align: center;
-	}
-	li a{
-		display: block;
-		color: white;
-		text-decoration: none;
-	}
-	li a:hover{
-		background-color: lightblue;
-	}
-	.active{
-		background-color: lightblue;
-	}
-	.headlinebox{
-		text-align: center;
-		height: 150px;
-		width: 1000px;
-		margin: auto;
-		margin-bottom: 20px;
-		background-color: #f5f5f5;
-	}
-	.headlinebox h2{
-		padding: 24px 235px 24px 235px;
-		width: 530px;
-		height: 102px;
-	}
-	.headlinebox a{
-		color: #2e60c2;
-	}
-	.banner{
-		width: 1000px;
-		height: 550px;
-		margin: auto;
-		margin-bottom: 20px;
-	}
-	.img{
-		position: absolute;
-		top: 315px;
-		width: 1000px;
-		height: 545px;
-		color: #fff;
-		opacity: 0;
-		transition: all 0.5s ease-in 0s;
-		overflow: hidden;
-	}
-	.img:nth-child(1){
-		background: url(img/img1.jpg);
-		background-size: 100%;
-	}
-	.img:nth-child(2){
-		background: url(img/img2.jpg);
-		background-size: 100%;
-	}
-	.img:nth-child(3){
-		background: url(img/img3.jpg);
-		background-size: 100%;
-	}
-	.prev{
-		position: absolute;
-		top: 530px;
-		left: 34%;
-		width: 20px;
-		height: 24px;
-		border: 1px solid rgba(255, 255, 255, 2);
-		border-radius: 0 5px 0 5px;
-		margin-top: 30px;
-		margin-left: -240px;
-		color: #c2ccb;
-		text-align: center;
-		background-color: rgba(255, 255, 255, 2);
-		cursor: pointer;
-	}
-	.next{
-		position: absolute;
-		top: 530px;
-		left: 66%;
-		width: 20px;
-		height: 24px;
-		border: 1px solid rgba(255, 255, 255, 2);
-		border-radius: 5px 0 0 5px;
-		margin-top: 30px;
-		margin-left: 218px;
-		color: #c2ccb;
-		text-align: center;
-		background-color: rgba(255, 255, 255, 2);
-		cursor: pointer;
-	}
-	.next:hover,
-	.prev:hover{
-		background-color: rgba(1, 1, 1, 0.73);
-		color: #FFFF;
-	}
-	.div1{
-		position: absolute;
-		top: 820px;
-		left: 50%;
-		margin-left: -40px;
-	}
-	.little{
-		float: left;
-		width: 10px;
-		height: 10px;
-		border-radius: 100%;
-		background-color: rgba(255, 245, 244, .3);
-		margin-left: 4px;
-		cursor: pointer;
-		border: 1px solid #464646;
-	}
-	.show{
-		opacity: 1;
-	}
-	.little_show{
-		background-color: #FFFF;
-	}
-	.main{
-		width: 1200px;
-		margin: auto;
-	}
-	.box{
-		display: flex;
-	}
-	.left,.mid,.right{
-		margin-top: 10px;
-		flex: 1;
-		width: 400px;
-		height: 480px;
-		border-radius: 10px;
-		background-color: lavender;
-	}
-	.mid{
-		margin-left:10px;
-		margin-right:10px;
-	}
-	.left:hover{
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	}
-	.mid:hover{
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	}
-	.right:hover{
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	}
-	.up img{
-		width: 380px;
-		padding: 10px 10px 10px 10px;
-	}
-	.text{
-		padding: 0px 10px 10px 10px;
-	}
-	.text h2{
-		padding-bottom: 5px;
-		text-align: center;
-	}
-	.text p{
-		padding: 5px;
-		font-size:16px;
-		text-indent: 2em;
-	}
-	.footer{
-		width: 100%;
-		height: 60px;
-		margin: 10px;
-		text-align: center;
-		background-color: lavenderblush;
-	}
-	.footer hr{
-		width: 90%;
-		margin: auto;
-	}
-	.footer h4{
-		padding-top: 6px;
-		padding-bottom: 5px;
-	}
-	.footer h5{
-		padding: 5px;
-	}
-	.left .up{
-		position: relative;
-		background: url(img/left_up.jpg);
-		width: 360px;
-		height: 250px;
-		padding: 10px 10px 10px 10px;
-		float: left;
-		overflow: hidden;
-	}
-	.left_text p{
-		position: absolute;
-		width: 300px;
-		height: 270px;
-		line-height: 285px;
-		background: rgba(209,194,211,0.5);
-		transition: all 0.5s;
-		text-align: center;
-		left: -300px;
-		top: 0;
-	}
-	.left_text:hover p{
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
-	.mid_img{
-		position: relative;
-	}
-	.mid_img img,.mid_img .text{
-		position: absolute;
-		top:0;
-		left:0;
-	}
-	
-	.mid_img p{
-		width: 380px;
-		margin: auto;
-		text-align: justify;
-		font-size:18px;
-	}
-	.zheng,.fan{
-		backface-visibility: hidden;
-		transition: all 0.5s ease-in 0s;
-	}
-	.fan{
-		transform: rotateY(-180deg);
-	}
-	.mid_img:hover .zheng{
-		transform: rotateY(180deg);
-	}
-	.mid_img:hover .fan{
-		transform: rotateY(0deg);
-	}
-	.text{
-		top: 80px;
-	}
-	.hov img{
-		transition: all 0.5s ease;
-	}
-	.hov:hover img{
-		transform: scale(1.1);
-	}
-  /* 模态窗口的样式 */
-  .modal {
-	display: none; /* 默认隐藏 */
-    position: fixed;
-    z-index: 1; /* 位于顶层 */
-    left: 0;
-    top: 0;
-    width: 100%; /* 全屏宽度 */
-    height: 100%; /* 全屏高度 */
-    overflow: auto; /* 超出时滚动 */
-    background-color: rgb(0,0,0); /* 背景颜色带些透明度 */
-    background-color: rgba(0,0,0,0.4); /* 透明度 */
-  }
-  /* 模态窗口的样式 */
-  .modal2 {
-  	display: none; /* 默认隐藏 */
-    position: fixed;
-    z-index: 1; /* 位于顶层 */
-    left: 0;
-    top: 0;
-    width: 100%; /* 全屏宽度 */
-    height: 100%; /* 全屏高度 */
-    overflow: auto; /* 超出时滚动 */
-    background-color: rgba(0,0,0,0.4); /* 透明度 */
-  }
-  .lr_container{
-	  max-width: 400px;
-	  margin: 18% auto; /* 垂直居中 */
-	  padding: 20px;
-	  background: #fff;
-	  border-radius: 5px;
-	  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  .loginText{
-      text-align: center;
-      color: #333;
-  }
-  .lint {
-     width: 94.5%;
-     height: 20px;
-     padding: 10px;
-     margin: 10px 0 15px;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-  }
-  .submitBtn{
-      padding: 10px;
-      width: 100%;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  .submitBtn:hover {
-      background: #0056b3;
-  }
-  .close1{
-      color: #ff0000;
-	  float: right;
-  }
-  .close2{
-      color: #ff0000;
-  	  float: right;
-  }
-  #loginBtn,#registerBtn{
-	width: 90%;
-	height: 24px;
-	 margin-top:2px;
-	background: #fff;
-	color: black;
-	border: none;
-  }
-  #loginBtn:hover{
-	  background-color: aquamarine;
-	  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  }
-  #registerBtn:hover{
-	  background-color: aquamarine;
-	  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  }
-</style>
-</head>
 <body>
 		<div class="header">
 			<div class="logo">
@@ -470,6 +469,7 @@
 				<li><a href="introduce3.html" class="link">信阳毛尖</a></li>
 				<li><a href="#" class="link">新乡小麦</a></li>
 				<li><a href="#" class="link">南阳黄牛</a></li>
+				<li><a href="me.html" class="link">个人主页</a></li>
 			</ul>
 		</div>
 		<div class="headlinebox">
